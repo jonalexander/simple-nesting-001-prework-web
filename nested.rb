@@ -1,3 +1,5 @@
+#my_hash = {first: "i'm first!", second: "i'm second!"}
+#my_hash[:third] = "i'm third!"
 
 def hopper
 	programmer_hash = 
@@ -16,6 +18,7 @@ def hopper
         }
      }
 
+return programmer_hash[:grace_hopper]
 
 end
 
@@ -37,6 +40,8 @@ def alan_kay_is_known_for
           :languages => ["C"]
         }
      }
+
+  return programmer_hash[:alan_kay][:known_for]
 end
 
 def dennis_ritchies_language
@@ -55,6 +60,8 @@ def dennis_ritchies_language
           :languages => ["C"]
         }
      }
+dennis = programmer_hash[:dennis_ritchie][:languages]
+return dennis[0]
 end
 
 def adding_matz
@@ -63,7 +70,6 @@ def adding_matz
 #   :known_for => "Ruby",
 #    :languages => ["LISP, C"]
 # }
-
 	programmer_hash = 
  		{
         :grace_hopper => {
@@ -80,7 +86,13 @@ def adding_matz
         }
      }
 
-    
+     ### code here ###
+     programmer_hash[:yukihiro_matsumoto]= {}
+     programmer_hash[:yukihiro_matsumoto]= {
+      :known_for => "Ruby", :languages => ["LISP, C"]
+     }
+     ### return new hash ###
+    return programmer_hash
 end
 
 def changing_alan
@@ -100,8 +112,15 @@ def changing_alan
         }
      }
      #change what Alan Kay is :known_for the value of the alans_new_info variable. 
+
+
      alans_new_info = "GUI"
      
+     ### code here
+     programmer_hash[:alan_kay][:known_for] = alans_new_info
+
+     ### return new hash
+     return programmer_hash
      
 end
 
@@ -122,7 +141,11 @@ def adding_to_dennis
         }
      }
 
-     
+     ### code here
+     programmer_hash[:dennis_ritchie][:languages] << "Assembly"
+
+     ### return new hash
+     return programmer_hash
 end
 
 
